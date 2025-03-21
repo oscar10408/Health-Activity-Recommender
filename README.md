@@ -66,8 +66,10 @@ plt.xlabel("Iterations")
 plt.ylabel("Cumulative Reward")
 plt.title("Performance of the Recommendation System")
 ```
-![Regret Monitor](images/Regret_Monitor.png)
-![Total_Regret Monitor](images/Total_Regret_Monitor.png)
+<p align="center">
+    <img src="images/Regret_Monitor.png" width="45%" />
+    <img src="images/Total_Regret_Monitor.png" width="45%" />
+</p>
 
 
 ## **📊 Results & Insights**
