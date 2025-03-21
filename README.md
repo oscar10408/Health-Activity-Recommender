@@ -1,21 +1,31 @@
-# Health Activity Recommender 🚀
+# **Health Activity Recommendation System 🚀**  
+A **Reinforcement Learning-based recommendation system** that utilizes **Thompson Sampling** to provide **personalized health activity suggestions** and improve user engagement.
 
-This project implements a **Reinforcement Learning-based health activity recommendation system** using **Thompson Sampling** to optimize personalized activity suggestions.
+## **📌 Project Overview**  
+This project implements a **dynamic recommendation system** that suggests **health activities** (e.g., walking, jogging) based on users' previous engagement patterns.  
+It leverages **Thompson Sampling**, a **contextual bandit approach**, to optimize recommendations by balancing **exploration vs. exploitation**.
 
-## 🔹 Features
-- Uses **Thompson Sampling** for **dynamic decision-making**.
-- Recommends **health activities** based on user engagement data.
-- Learns **optimal activity strategies** using **contextual bandits**.
-- Achieves **15-20% increase in step counts** for active users.
+### **🔹 Key Highlights**
+✔ **Uses Reinforcement Learning (Thompson Sampling) for dynamic decision-making**  
+✔ **Adapts recommendations based on real-time user engagement**  
+✔ **Optimizes step count improvement with a data-driven approach**  
+✔ **Achieves a 15-20% increase in user activity levels**  
 
-## 📂 Project Structure
-- `notebooks/` - Jupyter notebooks for experiments and analysis.
-- `data/` - Processed datasets used for training and evaluation.
-- `src/` - Core implementation of the recommendation system.
-- `README.md` - Project overview and setup instructions.
+---
 
-## 🛠️ Installation
-```sh
-git clone https://github.com/YOUR_GITHUB_USERNAME/health-activity-recommender.git
-cd health-activity-recommender
-pip install -r requirements.txt
+## **📂 Project Workflow**  
+
+### **Step 1: Data Preprocessing**
+The dataset consists of **multiple CSV files**:
+- `users.csv`: Contains user information.
+- `suggestions.csv`: Records activity recommendations and responses.
+- `jbsteps.csv` & `gfsteps.csv`: Track user step counts.
+
+**Key preprocessing steps:**
+✔ **Merged user data with activity records**  
+✔ **Transformed step counts using log normalization** to stabilize variance  
+✔ **Handled missing values and inconsistencies in the dataset**  
+
+```python
+suggestions_df['reward.jbsteps_transformed'] = np.log1p(suggestions_df['jbsteps60'])
+suggestions_df['reward.gfsteps_transformed'] = np.log1p(suggestions_df['gfsteps60'])
