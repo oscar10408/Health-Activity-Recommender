@@ -76,4 +76,3 @@ plt.title("Performance of the Recommendation System")
 - Personalized activity recommendations led to a 15-20% increase in user step counts.
 - Dynamic adaptation improved the accuracy of suggestions by 30%.
 - Users showed a 25% increase in engagement with recommended activities.
-🔹 Key Takeaway: Reinforcement Learning-based recommendations effectively drive healthier behavior! 🎯
